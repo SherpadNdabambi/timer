@@ -1,0 +1,36 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+button{
+    background-color: #c2e8f6;
+}
+
+#loginButton{
+    color: #18323d;
+    font-weight: bold;
+    height: 30px;
+    margin-top: 5px;
+    width: 70px;
+}
+
+#loginForm{
+    background-color: #18323d;
+    border-radius: 3px;
+    color: #c2e8f6;
+    padding: 20px 30px 60px;
+}
+
+#loginForm input{
+    border: none;
+    height: 30px;
+}
+
+#loginMessage{
+    color: red;
+    text-align: center;
+}
+
+#wrapper{
+    color: #18323d;
+}

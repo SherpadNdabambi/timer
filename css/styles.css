@@ -1,0 +1,151 @@
+*{
+    box-sizing: border-box;
+}
+
+#accountButton{
+	margin: 5px;
+}
+
+#accountIcon:active {
+	width: 22px;
+}
+
+#accountPanel{
+	margin: 5px;
+	padding: 10px;
+	text-align: center;
+	z-index: 1;
+}
+
+#accountPanel div{
+	margin-bottom: 10px;
+}
+
+#accountPanel div:hover{
+	color: #7298a6;
+	cursor: pointer;
+}
+
+body{
+	background-color: #c2e8f6;
+	margin: auto;
+}
+
+button{
+	background-color: transparent;
+	border: none;
+	color: #18323d;
+	cursor: pointer;
+	outline: none;
+}
+
+button:hover{
+	opacity: 0.5;
+}
+
+.center{
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%);
+}
+
+.center.middle{
+	transform: translate(-50%, -50%);
+}
+
+.closeButton{
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    height: 25px;
+    text-align: center;
+    width: 25px
+}
+
+.closeButton:hover{
+	opacity: 0.5;
+}
+
+.container{
+    position: relative;
+}
+
+.context-menu{
+	background-color: #18323d;
+	color: #c2e8f6;
+	margin-right: 0.5%;
+	padding-bottom: 1%;
+	padding-top: 1%;
+	width: 270px;
+}
+
+.context-menu-item{
+	padding-bottom: 2%;
+	padding-left: 5%;
+	padding-top: 2%;
+}
+
+.context-menu-item:hover{
+	background-color: #c2e8f6;
+	color: #18323d;
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+#contextMenu{
+  	--mouse-x: 0px;
+  	--mouse-y: 0px;
+	position: fixed;
+	text-align: left;
+	transform: translateX(min(var(--mouse-x), calc(100vw - 100%))) translateY(min(var(--mouse-y), calc(100vh - 100%)));
+	z-index: 1;
+}
+
+#copyright{
+	text-align: center;
+}
+
+footer{
+    background-color: #18323d;
+    color: #c0e6f4;
+    height: 100px;
+}
+
+.hidden{
+	display: none;
+}
+
+.hidden{
+	display: none;
+}
+
+.middle{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.right{
+	position: absolute;
+	right: 0;
+}
+
+.top{
+	position: absolute;
+	top: 0;
+}
+
+#taskName{
+	text-align: center;
+}
+
+.top{
+	margin: 0;
+	position: absolute;
+	top: 0;
+}
+
+#wrapper{
+	height: calc(100vh - 100px);
+}

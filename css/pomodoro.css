@@ -1,0 +1,28 @@
+body {
+  	font-family: 'Arial', sans-serif;
+	text-align: center;
+}
+
+.control:active {
+	width: 61px;
+}
+
+@font-face{
+	font-family: digital-7;
+	src: url("../fonts/digital-7 (mono).ttf");
+}
+
+#phaseLabel{
+	font-size: 38px;
+	height: 60px;
+}
+
+#sessionForm{
+	height: 60px;
+}
+
+#timerDiv{
+	font-family: digital-7;
+	font-size: 64px;
+	height: 80px;
+}

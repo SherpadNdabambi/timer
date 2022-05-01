@@ -1,0 +1,110 @@
+*{
+    font-family: "Open Sans", sans-serif;
+}
+
+body{
+    margin: auto;
+}
+
+#buttonContainer{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    width: 240px;
+}
+
+#buttonContainer div{
+    border: 1px solid grey;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 5px;
+}
+
+#pauseButton img{
+    padding: 5px;
+    width: 24px;
+}
+
+#pauseButton img:active, #refreshButton img:active{
+    width: 22px;
+}
+
+#refreshButton img{
+    width: 24px;
+}
+
+#startButtonContainer {
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+
+#startButton img, #stopButton img{
+    padding: 5px;
+    width: 48px;
+}
+
+#startButton img:active, #stopButton img:active{
+    width: 45px;
+}
+
+#taskName{
+    background-color: #c2e8f6;
+}
+
+#taskNameDialogue{
+    align-items: center;
+    background-color: #18323d;
+    border-radius: 5px 5px 5px 5px;
+    color: #c2e8f6;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    left: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#taskNameDialogue button{
+    background-color: #c2e8f6;
+    border-radius: 5px;
+    height: 30px;
+    width: 50px;
+}
+
+#taskNameDialogue input{
+    border: none;
+    border-radius: 3px;
+    height: 30px;
+    margin-top: 10px;
+    width: 250px;
+}
+
+#taskNameDiv{
+    color: grey;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#taskNameDiv:hover{
+    opacity: 0.5;
+}
+
+#timerDiv{
+    color: #353535;
+    font-family: 'Roboto', serif;
+    font-size: 48px;
+}
+
+#wrapper{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+}
