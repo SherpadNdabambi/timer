@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3b678e77-fd9a-4721-9ef2-c1bc43ad743f" name="Changes" comment="">
+    <list default="true" id="3b678e77-fd9a-4721-9ef2-c1bc43ad743f" name="Changes" comment="Initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/pomodoro.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/pomodoro.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/stopwatch.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/stopwatch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/timer.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/timer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pomodoro.html" beforeDir="false" afterPath="$PROJECT_DIR$/pomodoro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stopwatch.html" beforeDir="false" afterPath="$PROJECT_DIR$/stopwatch.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,8 +65,25 @@
       <workItem from="1651353036265" duration="32000" />
       <workItem from="1651353096009" duration="21403000" />
       <workItem from="1651393116413" duration="19093000" />
-      <workItem from="1651434740973" duration="758000" />
+      <workItem from="1651434740973" duration="852000" />
+      <workItem from="1651438132849" duration="1000" />
+      <workItem from="1651461987574" duration="2278000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1651435559096</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1651435559096</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial commit">
+      <created>1651435577037</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1651435577037</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -82,5 +99,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
 </project>
