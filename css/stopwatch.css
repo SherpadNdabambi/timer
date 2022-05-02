@@ -101,7 +101,7 @@ body{
     font-size: 48px;
 }
 
-#wrapper{
+main{
     align-items: center;
     display: flex;
     flex-direction: column;

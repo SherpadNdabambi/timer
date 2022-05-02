@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3b678e77-fd9a-4721-9ef2-c1bc43ad743f" name="Changes" comment="Initial commit">
+    <list default="true" id="3b678e77-fd9a-4721-9ef2-c1bc43ad743f" name="Changes" comment="Added main tags">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pomodoro.html" beforeDir="false" afterPath="$PROJECT_DIR$/pomodoro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stopwatch.html" beforeDir="false" afterPath="$PROJECT_DIR$/stopwatch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/stopwatch.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/stopwatch.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/time.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/time.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/timer.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/timer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/vendor/jquery-3.6.0.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/vendor/jquery-3.6.0.min.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,18 +40,19 @@
   <component name="ProjectId" id="28U1d3SiGuXzoBJAxwESADAuZ5Z" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -67,7 +70,14 @@
       <workItem from="1651393116413" duration="19093000" />
       <workItem from="1651434740973" duration="852000" />
       <workItem from="1651438132849" duration="1000" />
-      <workItem from="1651461987574" duration="2278000" />
+      <workItem from="1651461987574" duration="2710000" />
+      <workItem from="1651465285322" duration="354000" />
+      <workItem from="1651465778814" duration="25000" />
+      <workItem from="1651465982643" duration="411000" />
+      <workItem from="1651510063739" duration="747000" />
+      <workItem from="1651973342328" duration="616000" />
+      <workItem from="1652014432535" duration="21000" />
+      <workItem from="1652891756976" duration="2359000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1651435559096</created>
@@ -83,7 +93,42 @@
       <option name="project" value="LOCAL" />
       <updated>1651435577037</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Initial commit">
+      <created>1651464454626</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1651464454626</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added meta tags">
+      <created>1651464602263</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1651464602263</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added meta tags">
+      <created>1651464640927</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1651464640927</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added main tags">
+      <created>1651465637401</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1651465637401</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added main tags">
+      <created>1651510124538</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1651510124538</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,6 +147,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Added meta tags" />
+    <MESSAGE value="Added main tags" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added main tags" />
   </component>
 </project>

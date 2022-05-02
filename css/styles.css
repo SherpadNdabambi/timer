@@ -126,6 +126,10 @@ footer{
 	transform: translateY(-50%);
 }
 
+main{
+	height: calc(100vh - 100px);
+}
+
 .right{
 	position: absolute;
 	right: 0;
@@ -144,8 +148,4 @@ footer{
 	margin: 0;
 	position: absolute;
 	top: 0;
-}
-
-#wrapper{
-	height: calc(100vh - 100px);
 }
