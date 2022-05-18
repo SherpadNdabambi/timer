@@ -26,7 +26,7 @@ class Time{
 			else timeInWords += this.minutes + " minutes";
 		}
 		if(this.seconds !== 0){
-			if(!(this.hours === 0 && this.minutes == 0))timeInWords += " and ";
+			if(!(this.hours === 0 && this.minutes === 0))timeInWords += " and ";
 			if(this.seconds === 1) timeInWords += "1 second";
 			else timeInWords += this.seconds + " seconds";
 		}
@@ -60,6 +60,7 @@ class Time{
 			this.seconds += 60;
 		}
 	}
+
 	minus(RHS){
 		let result = new Time();
 
@@ -79,8 +80,11 @@ class Time{
 
 		return result;
 	}
+
 	times(multiplier){
+
 		if(multiplier === 0) return new Time();
+
 		let result = new Time(this.toString());
 		if(multiplier < 0){
 			multiplier = -multiplier;
@@ -89,10 +93,12 @@ class Time{
 			result.seconds = -result.seconds;
 		}
 		for(let i = 1; i < multiplier; i++) result = result.plus(this);
+
 		return result;
 	}
 
 	toString(format = "HHMMSS"){
+
 		let timeString = '';
 		format = format.toUpperCase();
 
