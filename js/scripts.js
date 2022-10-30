@@ -32,7 +32,7 @@ function calculateTimeStopped(){
 }
 
 function checkLogin(){
-    if(localStorage.getItem('username')) return true;
+    if(localStorage.getItem('user')) return true;
     location.href = 'login.html';
 }
 

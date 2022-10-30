@@ -1,12 +1,35 @@
 //get DOM elements
-const loginMessage = $('#loginMessage'), password = $('#password'), username = $('#username');
+const email = $('#email'),
+      loginMessage = $('#loginMessage'),
+      password = $('#password');
 
-function login(){
-    if(username.val() === 'test' && password.val() === '123'){
-        localStorage.setItem('username', 'Test User');
+async function login(){
+    if(email.val() === 'test' && password.val() === '123'){
+        localStorage.user = JSON.stringify(
+            {
+                id: 'test',
+                username: 'Test User'
+            });
         location.href = 'index.html';
     }
-    else loginMessage.append('Invalid username and/or password');
+    else {
+        await $.post('php/login.php',
+            {
+                email: email.val(),
+                password: password.val()
+            },
+            (result) => {
+                try {
+                    localStorage.user = JSON.stringify(JSON.parse(result));
+                    location.href = 'index.html';
+                }
+                catch(error) {
+                    loginMessage.empty();
+                    loginMessage.append(`Failed to login: ${result}`);
+                }
+            }
+        );
+    }
 }
 
 setFooterYear();
