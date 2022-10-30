@@ -32,15 +32,15 @@
 
 <body>
 
-    <main class="container">
+    <main>
 
-        <div id="loginForm" class="center middle">
+        <div id="loginForm">
 
             <p>
-                <label for="username">Username:</label>
+                <label for="email">Email address:</label>
             </p>
             <p>
-                <input id="username">
+                <input id="email">
             </p>
 
             <p>
@@ -52,11 +52,21 @@
 
             <div id="loginMessage"></div>
 
-            <button id="loginButton" class="center" onclick="login()">Login</button>
+            <button id="loginButton" onclick="login()">Login</button>
+
+            <div id="test">
+                <p>
+                    For testing, use
+                </p>
+                <p>
+                    Email address: test
+                </p>
+                <p>
+                    Password: 123
+                </p>
+            </div>
 
         </div>
-        Username: test,
-        Password: 123
 
     </main>
 
