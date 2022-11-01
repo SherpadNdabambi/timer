@@ -3,14 +3,21 @@ const email = $('#email'),
       loginMessage = $('#loginMessage'),
       password = $('#password');
 
+//declare global variables
+let user;
+
+$(document).ready(() => {
+    setFooterYear();
+});
+
 async function login(){
+
     if(email.val() === 'test' && password.val() === '123'){
         localStorage.user = JSON.stringify(
             {
                 id: 'test',
                 username: 'Test User'
             });
-        location.href = 'index.html';
     }
     else {
         await $.post('php/login.php',
@@ -21,7 +28,6 @@ async function login(){
             (result) => {
                 try {
                     localStorage.user = JSON.stringify(JSON.parse(result));
-                    location.href = 'index.html';
                 }
                 catch(error) {
                     loginMessage.empty();
@@ -29,7 +35,9 @@ async function login(){
                 }
             }
         );
+        user = JSON.parse(localStorage.user);
+        await getSettings();
     }
-}
 
-setFooterYear();
+    location.href = 'index.html';
+}

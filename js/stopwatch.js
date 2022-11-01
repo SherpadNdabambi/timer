@@ -1,5 +1,8 @@
 //get DOM elements
-const refreshButton = document.querySelector('#refreshButton'), startButtonContainer = document.querySelector('#startButtonContainer'), stopButtonContainer = document.querySelector('#stopButtonContainer'), taskNameDiv = document.querySelector('#taskNameDiv');
+const refreshButton = document.querySelector('#refreshButton'),
+      startButtonContainer = document.querySelector('#startButtonContainer'),
+      stopButtonContainer = document.querySelector('#stopButtonContainer'),
+      taskNameDiv = document.querySelector('#taskNameDiv');
 
 //add document click event
 $(document).click(event => {
@@ -28,13 +31,14 @@ $(document).click(event => {
 });
 
 //page load function
-$(document).ready(function(){
-    getSettingVariables();
+$(document).ready(async () => {
     initializeGlobalVariables();
+    await getSettings();
     initializeTimer();
     displayTimer();
     setFooterYear();
     setSoundIcon();
+	setUsername();
     setVolume();
     volumeSlider.val(volume * 100);
 
@@ -74,9 +78,9 @@ function displayTimer(){
 
 function initializeGlobalVariables(){
     pauseTimer = new Timer();
-    timeLeft = new Time(workTime.toString());
     timePaused = new Time();
     timer = new Timer();
+    user = JSON.parse(localStorage.user);
     volumeSlider = $('#volumeSlider');
 }
 

@@ -2,7 +2,11 @@
 const phaseLabel = document.querySelector("#phaseLabel");
 
 //declare global variables
-let breakIteration, extraTimeWorked = new Time(), phase, timeLeft, workIteration;
+let breakIteration,
+	extraTimeWorked = new Time(),
+	phase,
+	timeLeft,
+	workIteration;
 
 //add document click event
 $(document).click(event => {
@@ -24,14 +28,15 @@ $(document).click(event => {
 });
 
 //page load function
-$(document).ready(function(){
+$(document).ready(async () => {
 	addContextMenu();
-	getSettingVariables();
 	initializeGlobalVariables();
+    await getSettings();
 	initializeTimer();
 	displayTimer();
 	setFooterYear();
 	setSoundIcon();
+	setUsername();
 	setVolume();
 	volumeSlider.val(volume * 100);
 
@@ -102,6 +107,7 @@ function initializeGlobalVariables(){
 	pauseTimer = new Timer();
 	timePaused = new Time();
 	timer = new Timer();
+	user = JSON.parse(localStorage.user);
 	volumeSlider = $('#volumeSlider');
 }
 
