@@ -41,7 +41,7 @@ $(document).ready(async () => {
 	volumeSlider.val(volume * 100);
 
 	//declare pause timer tick function
-	pauseTimer.tick = function(){
+	pauseTimer.tick = () => {
 		timePaused.addSeconds(1);
 		updatePageTitle();
 		if(pauseReminder && timePaused.toString() === pauseTimeLimit.times(pauseReminderCount + 1).toString()){
@@ -183,7 +183,7 @@ function start(){
 		pauseButton.focus();
 		if (timeWorked.toString() === "00:00:00") {
 			calculateTimeStarted();
-			saveSession();
+			createSession();
 		}
 	}
 }

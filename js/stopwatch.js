@@ -117,7 +117,7 @@ function start(){
     if(refreshButton.disabled) refreshButton.removeAttribute('disabled');
     if(timeWorked.toString() === '00:00:00'){
         calculateTimeStarted();
-        saveSession();
+        createSession();
     }
 }
 

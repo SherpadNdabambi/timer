@@ -126,32 +126,40 @@ function remind(message){
     alert(message);
 }
 
-function saveSession(){
+function createSession(){
+
+    //declare local variables
+    let session;
+
     calculateTimeStopped();
-    if (localStorage.getItem('sessions'))
-        localStorage.setItem('sessions',
-            localStorage.getItem('sessions') + ';' +
-            JSON.stringify(
-                {
-                    date_started: dateStarted,
-                    date_stopped: dateStopped,
-                    task_name: taskName,
-                    time_started: timeStarted,
-                    time_stopped: timeStopped,
-                    time_worked: timeWorked,
-                    timer_mode: timerMode
-                }));
-    else localStorage.setItem('sessions',
-        JSON.stringify(
+    session =
+        {
+            date_started: dateStarted,
+            date_stopped: dateStopped,
+            task_name: taskName,
+            time_started: timeStarted,
+            time_stopped: timeStopped,
+            time_worked: timeWorked.toString(),
+            type: timerMode
+        };
+    if (user.sessions) user.sessions.push(session);
+    else user.sessions = [session];
+    try {
+        $.post('php/createSession.php',
             {
-                date_started: dateStarted,
-                date_stopped: dateStopped,
-                task_name: taskName,
-                time_started: timeStarted,
-                time_stopped: timeStopped,
-                time_worked: timeWorked,
-                timer_mode: timerMode
-            }));
+                date_started: session.date_started,
+                date_stopped: session.date_stopped,
+                task_name: session.task_name,
+                time_started: session.time_started,
+                time_stopped: session.time_stopped,
+                time_worked: session.time_worked,
+                type: session.type,
+                user_id: user.id
+            });
+    }
+    catch(error) {
+        console.log(error);
+    }
 }
 
 function setSoundIcon(){
@@ -180,7 +188,7 @@ function setVolume(){
         $.post('php/updateVolume.php',
             {
                 user_id: user.id,
-                settings: user.settings.volume
+                volume: user.settings.volume
             }
         );
     }
@@ -207,24 +215,26 @@ function stop(){
 }
 
 function updateSession(){
+
     //declare local variables
-    let currentSession, sessionsString;
-    
+    let currentSession;
+
     calculateTimeStopped();
-    
-    sessionsString = localStorage.getItem('sessions');
-    sessions = sessionsString.split(';');
-    
-    currentSession = JSON.parse(sessions[sessions.length - 1]);
+
+    currentSession = user.sessions[user.sessions.length - 1];
     currentSession.date_stopped = dateStopped.toString();
     currentSession.task_name = taskName.toString();
     currentSession.time_stopped = timeStopped.toString();
     currentSession.time_worked = timeWorked.toString();
-    
-    //update sessions
-    sessionsString = sessionsString.replace(sessions[sessions.length - 1], JSON.stringify(currentSession));
-    sessions[sessions.length - 1] = JSON.stringify(currentSession);
-    localStorage.setItem('sessions', sessionsString);
+    localStorage.user = JSON.stringify(user);
+    $.post('php/updateSession.php',
+        {
+            date_stopped: currentSession.date_stopped,
+            task_name: currentSession.task_name,
+            time_stopped: currentSession.time_stopped,
+            time_worked: currentSession.time_worked,
+            user_id: user.id
+        });
 }
 
 function volumeSliderChanged(){
