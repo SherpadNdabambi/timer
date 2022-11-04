@@ -1,7 +1,7 @@
 <?php
 
 // create connection to database
-$sqlConnection = new mysqli("localhost", "mysql", "mysql", "my_timer") or die("Failed to connect to database: $sqlConnection->connect_error");
+$sqlConnection = new mysqli("localhost", "mysql", "mysql", "timer") or die("Failed to connect to database: $sqlConnection->connect_error");
 
 // get user id
 $user_id = $_POST["user_id"];

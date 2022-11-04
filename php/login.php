@@ -1,7 +1,7 @@
 <?php
 
 //create connection to database
-$sqlConnection = new mysqli("localhost", "mysql", "mysql", "my_timer") or die("Connection failed: " .$sqlConnection->connect_error);
+$sqlConnection = new mysqli("localhost", "mysql", "mysql", "timer") or die("Connection failed: " .$sqlConnection->connect_error);
 
 //get login details from form
 $email = $_POST["email"];

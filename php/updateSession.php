@@ -4,7 +4,7 @@
 session_start();
 
 //create database connection
-$sqlConnection = new mysqli("localhost", "mysql", "mysql", "my_timer") or die ("Connection failed: " .$sqlConnection->connect_error);
+$sqlConnection = new mysqli("localhost", "mysql", "mysql", "timer") or die ("Connection failed: " .$sqlConnection->connect_error);
 
 //get session data from session form
 $date_stopped = $_POST["date_stopped"];
