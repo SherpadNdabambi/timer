@@ -3,8 +3,14 @@
 //start session
 session_start();
 
-//create database connection
-$sqlConnection = new mysqli("localhost", "mysql", "mysql", "timer") or die ("Connection failed: " .$sqlConnection->connect_error);
+// set database credentials
+$db_name = "localhost";
+$db_username = "mysql";
+$db_password = "mysql";
+$db_hostname= "timer";
+
+// create connection to database
+$sqlConnection = new mysqli($db_name, $db_username, $db_password, $db_hostname) or die("Connection failed: " .$sqlConnection->connect_error);
 
 //get session data from session form
 $date_stopped = $_POST["date_stopped"];

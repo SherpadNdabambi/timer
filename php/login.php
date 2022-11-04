@@ -1,7 +1,13 @@
 <?php
 
-//create connection to database
-$sqlConnection = new mysqli("localhost", "mysql", "mysql", "timer") or die("Connection failed: " .$sqlConnection->connect_error);
+// set database credentials
+$db_name = "localhost";
+$db_username = "mysql";
+$db_password = "mysql";
+$db_hostname= "timer";
+
+// create connection to database
+$sqlConnection = new mysqli($db_name, $db_username, $db_password, $db_hostname) or die("Connection failed: " .$sqlConnection->connect_error);
 
 //get login details from form
 $email = $_POST["email"];

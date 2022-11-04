@@ -1,7 +1,13 @@
 <?php
 
+// set database credentials
+$db_name = "localhost";
+$db_username = "mysql";
+$db_password = "mysql";
+$db_hostname= "timer";
+
 // create connection to database
-$sqlConnection = new mysqli("localhost", "mysql", "mysql", "timer") or die("Failed to connect to database: $sqlConnection->connect_error");
+$sqlConnection = new mysqli($db_name, $db_username, $db_password, $db_hostname) or die("Connection failed: " .$sqlConnection->connect_error);
 
 // get parameters
 $user_id = $_POST["user_id"];
