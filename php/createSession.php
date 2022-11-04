@@ -4,13 +4,13 @@
 session_start();
 
 // set database credentials
-$db_name = "localhost";
+$db_hostname = "localhost";
 $db_username = "mysql";
 $db_password = "mysql";
-$db_hostname= "timer";
+$db_name = "timer";
 
 // create connection to database
-$sqlConnection = new mysqli($db_name, $db_username, $db_password, $db_hostname) or die("Connection failed: " .$sqlConnection->connect_error);
+$sqlConnection = new mysqli($db_hostname, $db_username, $db_password, $db_name) or die("Connection failed: " .$sqlConnection->connect_error);
 
 // get session data from session form
 $date_started = $_POST["date_started"];
