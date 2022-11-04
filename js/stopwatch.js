@@ -58,7 +58,7 @@ $(document).ready(async () => {
     timer.tick = () => {
         timeWorked.addSeconds(1);
         if(playTickSound) tickSound.play();
-        timerDiv.innerText = timeWorked.toString('MMSS');
+        timerDiv.innerText = (timeWorked.getHours()) ? timeWorked.toString('HHMMSS') : timeWorked.toString('MMSS');
         updatePageTitle();
         updateSession();
         if(document.activeElement.toString() !== '[object HTMLInputElement]') pauseButton.focus();
