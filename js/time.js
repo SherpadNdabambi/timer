@@ -1,72 +1,88 @@
 class Time{
+
+	#hours;
+	#minutes;
+	#seconds;
 	
 	constructor(timeString = "0:0:0"){
 
 		let timeArray = timeString.split(':');
-		this.hours = parseInt(timeArray[0]);
-		this.minutes = parseInt(timeArray[1]);
-		this.seconds = parseInt(timeArray[2]);
+		this.#hours = parseInt(timeArray[0]);
+		this.#minutes = parseInt(timeArray[1]);
+		this.#seconds = parseInt(timeArray[2]);
 
+	}
+
+	getHours() {
+		return this.#hours;
+	}
+
+	getMinutes() {
+		return this.#minutes;
+	}
+
+	getSeconds() {
+		return this.#seconds;
 	}
 
 	inWords(){
 		
 		let timeInWords = '';
 		
-		if(this.hours !== 0){
-			if(this.hours === 1) timeInWords += "1 hour";
-			else timeInWords += this.hours + " hours";
+		if(this.#hours !== 0){
+			if(this.#hours === 1) timeInWords += "1 hour";
+			else timeInWords += this.#hours + " hours";
 		}
-		if(this.minutes !== 0){
-			if(this.hours !==0){
+		if(this.#minutes !== 0){
+			if(this.#hours !==0){
 				timeInWords += " ";
-				if(this.seconds !== 0) timeInWords += "and ";
+				if(this.#seconds !== 0) timeInWords += "and ";
 			}
-			if(this.minutes === 1) timeInWords += "1 minute";
-			else timeInWords += this.minutes + " minutes";
+			if(this.#minutes === 1) timeInWords += "1 minute";
+			else timeInWords += this.#minutes + " minutes";
 		}
-		if(this.seconds !== 0){
-			if(!(this.hours === 0 && this.minutes === 0))timeInWords += " and ";
-			if(this.seconds === 1) timeInWords += "1 second";
-			else timeInWords += this.seconds + " seconds";
+		if(this.#seconds !== 0){
+			if(!(this.#hours === 0 && this.#minutes === 0))timeInWords += " and ";
+			if(this.#seconds === 1) timeInWords += "1 second";
+			else timeInWords += this.#seconds + " seconds";
 		}
 		return timeInWords;
 	}
 
 	addHours(hours){
-		this.hours += hours;
+		this.#hours += hours;
 	}
 
 	addMinutes(minutes){
-		this.minutes += minutes;
-		if(this.minutes > 59){
-			this.hours ++;
-			this.minutes -= 60;
+		this.#minutes += minutes;
+		if(this.#minutes > 59){
+			this.#hours ++;
+			this.#minutes -= 60;
 		}
-		if(this.minutes < 0){//in case user added negative minutes
-			this.hours--;
-			this.minutes += 60;
+		if(this.#minutes < 0){//in case user added negative minutes
+			this.#hours--;
+			this.#minutes += 60;
 		}
 	}
 
 	addSeconds(seconds){
-		this.seconds += seconds;
-		if(this.seconds > 59){
+		this.#seconds += seconds;
+		if(this.#seconds > 59){
 			this.addMinutes(1);
-			this.seconds -= 60;
+			this.#seconds -= 60;
 		}
-		if(this.seconds < 0){//in case user added negative seconds
-			this.minutes--;
-			this.seconds += 60;
+		if(this.#seconds < 0){//in case user added negative seconds
+			this.#minutes--;
+			this.#seconds += 60;
 		}
 	}
 
 	minus(RHS){
 		let result = new Time();
 
-		result.addHours(this.hours - RHS.hours);
-		result.addMinutes(this.minutes - RHS.minutes);
-		result.addSeconds(this.seconds - RHS.seconds);
+		result.addHours(this.#hours - RHS.hours);
+		result.addMinutes(this.#minutes - RHS.minutes);
+		result.addSeconds(this.#seconds - RHS.seconds);
 
 		return result;
 	}
@@ -74,9 +90,9 @@ class Time{
 	plus(RHS){
 		let result = new Time();
 
-		result.addHours(this.hours + RHS.hours);
-		result.addMinutes(this.minutes + RHS.minutes);
-		result.addSeconds(this.seconds + RHS.seconds);
+		result.addHours(this.#hours + RHS.hours);
+		result.addMinutes(this.#minutes + RHS.minutes);
+		result.addSeconds(this.#seconds + RHS.seconds);
 
 		return result;
 	}
@@ -103,18 +119,18 @@ class Time{
 		format = format.toUpperCase();
 
 		if(format.includes("HH")){
-			if(this.hours < 10) timeString = '0' + this.hours;
-			else timeString = this.hours + '';
+			if(this.#hours < 10) timeString = '0' + this.#hours;
+			else timeString = this.#hours + '';
 		}
 		if(format.includes("MM")){
 			if(timeString.length > 0) timeString += ':';
-			if(this.minutes < 10) timeString += '0' + this.minutes;
-			else timeString += this.minutes;
+			if(this.#minutes < 10) timeString += '0' + this.#minutes;
+			else timeString += this.#minutes;
 		}
 		if(format.includes("SS")){
 			if(timeString.length > 0) timeString += ':';
-			if(this.seconds < 10) timeString += '0' + this.seconds;
-			else timeString += this.seconds;
+			if(this.#seconds < 10) timeString += '0' + this.#seconds;
+			else timeString += this.#seconds;
 		}
 
 		return timeString;
