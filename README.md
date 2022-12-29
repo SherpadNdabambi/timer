@@ -17,6 +17,6 @@ Timer allows you to track your work time using a pomodoro timer, stopwatch, or c
 
 ## To do
 
-1. Add task drop-down list
-1. Create mobile app
-1. Create desktop app
+- [] Add task drop-down list
+- [] Create mobile app
+- [] Create desktop app
