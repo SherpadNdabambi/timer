@@ -36,6 +36,7 @@ $(document).ready(async () => {
     await getSettings();
     initializeTimer();
     displayTimer();
+	populateTasks();
     setFooterYear();
     setSoundIcon();
 	setUsername();

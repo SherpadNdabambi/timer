@@ -178,6 +178,16 @@ function createSession(){
     }
 }
 
+async function populateTasks() {
+	await getPreviousTasks();
+
+    user.previousTasks.forEach((task) => {
+        $("#taskList").append(
+            `<option value='${task.name}'></option>`
+        );
+    });
+}
+
 function setSoundIcon(){
     if (volumeSlider.val() === 0) soundIcon.src = 'img/icons8-mute-50.png';
     else soundIcon.src = 'img/icons8-audio-50.png';

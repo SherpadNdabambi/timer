@@ -33,6 +33,7 @@
     <script defer type="text/javascript">window.jQuery || document.write("<script type='text/javascript' src='js/vendor/jquery-3.6.0.min.js'><\/script>")</script>
     <script defer type="text/javascript" src="js/checkLogin.js"></script>
     <script defer type="text/javascript" src="js/time.js"></script>
+    <script defer type="text/javascript" src="js/getPreviousTasks.js"></script>
     <script defer type="text/javascript" src="js/getSettings.js"></script>
     <script defer type="text/javascript" src="js/timer.js"></script>
     <script defer type="text/javascript" src="js/scripts.js"></script>
@@ -93,7 +94,6 @@
                 <input id="taskName" autocomplete="off" list="taskList" onblur="this.placeholder = 'Unnamed task';" onchange="updateTaskName();" onfocus="this.placeholder = '';" placeholder="Unnamed task">
 
                 <datalist id="taskList">
-                    <?php foreach(array_reverse($tasklist) as $task) echo "<option value='$task[0]'></option>" ?>
                 </datalist>
 
             </p>
