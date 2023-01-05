@@ -68,6 +68,10 @@ function closeTaskNameDialogue(){
     taskNameDialogue.style.display = 'none';
 }
 
+/**
+ * 
+ * @returns {DateTime} { date: dateValue, time: timeValue }
+ */
 function currentDateTime(){
     let date = new Date, time = new Time(date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds());
 
@@ -89,11 +93,20 @@ function hide(){
     for (let i = 0; i < arguments.length; i++) arguments[i].setAttribute('class', (arguments[i].getAttribute('class') === '') ? 'hidden' : arguments[i].getAttribute('class') + ' hidden');
 }
 
+/**
+ * @param {Element} element
+ * @param {CoordinatePair} mousePosition { x: xCoordinate, y: yCoordinate }
+ * @returns {boolean} true if mousePosition is within element or false if mousePosition is outside element
+ */
 function isWithin(element, mousePosition){
     return (element.offsetLeft < mousePosition.x) && (mousePosition.x < (element.offsetLeft + element.offsetWidth)) && (element.offsetTop < mousePosition.y) && (mousePosition.y < (element.offsetTop + element.offsetHeight))
 }
 
-function isVisible(element){
+/**
+ * @param {Element} element
+ * @returns {boolean} true if element is visible or false if element is hidden
+ */
+ function isVisible(element){
     if (element.classList) return !element.classList.contains('hidden');
     else return element.style.display !== "none";
 }
@@ -118,6 +131,9 @@ function muteButtonClicked(){
     setVolume();
 }
 
+/**
+ * @param {string} message
+ */
 function remind(message){
     let speech = new SpeechSynthesisUtterance(message);
     speech.rate = 0.9;
@@ -172,6 +188,10 @@ function setUsername() {
     $('#username').append(user.username);
 }
 
+/**
+ * 
+ * @param {string} mode
+ */
 function setTimerMode(mode){
     if ((timeWorked.toString() === '00:00:00') || confirm(`Switch to ${mode} mode? Your current session will be saved.`)){
         localStorage.setItem('timerMode', mode);

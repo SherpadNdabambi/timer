@@ -1,3 +1,6 @@
+/**
+ * @returns {Promise}
+ */
 function getSettings(){
 
     return new Promise(async (resolve) => {

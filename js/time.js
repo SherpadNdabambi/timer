@@ -3,7 +3,11 @@ class Time{
 	#hours;
 	#minutes;
 	#seconds;
-	
+
+	/**
+	 * 
+	 * @param {string} timeString "HH:MM:SS"
+	 */
 	constructor(timeString = "0:0:0"){
 
 		let timeArray = timeString.split(':');
@@ -13,18 +17,33 @@ class Time{
 
 	}
 
+	/**
+	 * 
+	 * @returns {int} number of hours
+	 */
 	getHours() {
 		return this.#hours;
 	}
 
-	getMinutes() {
+	/**
+	 * 
+	 * @returns {int} number of minutes
+	 */
+	 getMinutes() {
 		return this.#minutes;
 	}
 
-	getSeconds() {
+	/**
+	 * 
+	 * @returns {int} number of seconds
+	 */
+	 getSeconds() {
 		return this.#seconds;
 	}
 
+	/**
+	 * @returns {string} time in words
+	 */
 	inWords(){
 		
 		let timeInWords = '';
@@ -49,10 +68,18 @@ class Time{
 		return timeInWords;
 	}
 
+	/**
+	 * 
+	 * @param {int} hours
+	 */
 	addHours(hours){
 		this.#hours += hours;
 	}
 
+	/**
+	 * 
+	 * @param {int} minutes
+	 */
 	addMinutes(minutes){
 		this.#minutes += minutes;
 		if(this.#minutes > 59){
@@ -65,6 +92,10 @@ class Time{
 		}
 	}
 
+	/**
+	 * 
+	 * @param {int} seconds
+	 */
 	addSeconds(seconds){
 		this.#seconds += seconds;
 		if(this.#seconds > 59){
@@ -77,6 +108,11 @@ class Time{
 		}
 	}
 
+	/**
+	 * 
+	 * @param {Time} RHS
+	 * @returns {Time} difference between two times
+	 */
 	minus(RHS){
 		let result = new Time();
 
@@ -87,7 +123,12 @@ class Time{
 		return result;
 	}
 
-	plus(RHS){
+	/**
+	 * 
+	 * @param {Time} RHS
+	 * @returns {Time} sum of two times
+	 */
+	 plus(RHS){
 		let result = new Time();
 
 		result.addHours(this.#hours + RHS.hours);
@@ -97,6 +138,11 @@ class Time{
 		return result;
 	}
 
+	/**
+	 * 
+	 * @param {int} multiplier 
+	 * @returns {Time} the product of multiplying a Time by a scalar value
+	 */
 	times(multiplier){
 
 		if(multiplier === 0) return new Time();
@@ -113,6 +159,11 @@ class Time{
 		return result;
 	}
 
+	/**
+	 * 
+	 * @param {string} format
+	 * @returns {string} time in words
+	 */
 	toString(format = "HHMMSS"){
 
 		let timeString = '';
