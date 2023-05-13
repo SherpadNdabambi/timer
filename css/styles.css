@@ -116,6 +116,10 @@ footer{
 	display: none;
 }
 
+.logo {
+	height: 3rem;
+}
+
 .middle{
 	position: absolute;
 	top: 50%;
@@ -123,7 +127,7 @@ footer{
 }
 
 main{
-	height: calc(100vh - 100px);
+	min-height: calc(100vh - 100px);
 }
 
 .right{

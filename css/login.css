@@ -1,23 +1,27 @@
-*{
+/* *{
     box-sizing: border-box;
     font-family: sans-serif;
-}
+} */
 
-button{
+/* button{
     background-color: #c2e8f6;
     margin-left: calc(50% - 35px);
-}
+} */
 
-input {
+/* input {
     width: 240px;
-}
+} */
 
-#loginButton{
+/* #loginButton{
     color: #18323d;
     font-weight: bold;
     height: 30px;
     margin-top: 5px;
     width: 70px;
+} */
+
+a {
+    color: #18323d;
 }
 
 #loginForm{
@@ -45,6 +49,6 @@ main {
     justify-content: center;
 }
 
-#test {
+#test-info {
     text-align: center;
 }
