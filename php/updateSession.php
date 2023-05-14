@@ -4,7 +4,7 @@
 session_start();
 
 // set database credentials
-$db_hostname = "localhost";
+$db_hostname = "127.0.0.1";
 $db_username = "mysql";
 $db_password = "mysql";
 $db_name = "timer";
